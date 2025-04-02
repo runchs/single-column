@@ -1,4 +1,5 @@
 import React from "react";
+import { Row, Col } from "react-bootstrap";
 
 interface Info {
     // card 1
@@ -89,7 +90,7 @@ const infoMock: Info = {
     // card 8
     paymentStatus: '!Payment Overdue',
     dayPastDue: 89,
-    lastOverDueDate: '25 Mar 2025',
+    lastOverDueDate: '',
     // card 9
     suggestCards: [
         { id: 1, name: 'Club Thailand JCB Card 1' },
@@ -105,7 +106,7 @@ const C360Tabs: React.FC = () => {
         <div className="p-4 bg-primary d-flex flex-column gap-3">
             <div className="text-end text-light">CDP data update as of <span className="fw-bold">25 Mar 2025</span></div>
             {/* card 1 */}
-            <div className="rounded-3 bg-light row gx-0 p-4">
+            <Row className="rounded-3 bg-light gx-0 p-4">
                 <div className="col-9 text-start fw-bold">
                     <div>{infoMock.nameTH} {infoMock.cdpId}</div>
                     <div>{infoMock.nameEN} {infoMock.cdpId}</div>
@@ -115,111 +116,135 @@ const C360Tabs: React.FC = () => {
                     <div>{infoMock.status}</div>
                     <div className="rounded-4 text-light bg-warning">Complaint Level: {infoMock.complaintLevel}</div>
                 </div>
-            </div>
+            </Row>
             {/* card 2 */}
             <div className="rounded-3 bg-light p-4 text-start">
-                <div className="row">
+                <Row>
                     <div className="col-4 fw-bold">Customer Group:</div>
                     <div className="col-8">{infoMock.customerGroup}</div>
-                </div>
-                <div className="row">
+                </Row>
+                <Row>
                     <div className="col-4 fw-bold">Complaint Group:</div>
                     <div className="col-8">{infoMock.complaintGroup}</div>
-                </div>
-                <div className="row">
+                </Row>
+                <Row>
                     <div className="col-4 fw-bold">Customer Type:</div>
                     <div className="col-8">{infoMock.customerType}</div>
-                </div>
-                <div className="row">
+                </Row>
+                <Row>
                     <div className="col-4 fw-bold">Member Status:</div>
                     <div className="col-8">{infoMock.memberStatus}</div>
-                </div>
-                <div className="row">
+                </Row>
+                <Row>
                     <div className="col-4 fw-bold">Customer Segment:</div>
                     <div className="col-8">{infoMock.customerSegment}</div>
-                </div>
+                </Row>
             </div>
             {/* card 3 */}
             <div className="rounded-3 bg-light p-4 text-start">
-                <div className="row">
+                <Row>
                     <div className="col-4 fw-bold">Phone No.:</div>
                     <div className="col-8">{infoMock.phoneNo}</div>
-                </div>
-                <div className="row">
+                </Row>
+                <Row>
                     <div className="col-4 fw-bold">Calling phone:</div>
                     <div className="col-8">{infoMock.callingPhone}</div>
-                </div>
-                <div className="row">
+                </Row>
+                <Row>
                     <div className="col-4 fw-bold">Mail-to-Office:</div>
                     <div className="col-8">{infoMock.address}</div>
-                </div>
-                <div className="row">
+                </Row>
+                <Row>
                     <div className="col-4 fw-bold">Gender:</div>
                     <div className="col-8">{infoMock.gender}</div>
-                </div>
-                <div className="row">
+                </Row>
+                <Row>
                     <div className="col-4 fw-bold">Marital Status:</div>
                     <div className="col-8">{infoMock.MaritalStatus}</div>
-                </div>
-                <div className="row">
+                </Row>
+                <Row>
                     <div className="col-4 fw-bold">Type of Job:</div>
                     <div className="col-8">{infoMock.typeOfJob}</div>
-                </div>
+                </Row>
             </div>
             {/* card 4 */}
             <div className="rounded-3 bg-light p-4 text-start">
-                <div className="row">
+                <Row>
                     <div className="col-4 fw-bold">Statement Channel:</div>
                     <div className="col-8">{infoMock.statementChannel}</div>
-                </div>
-                <div className="row">
+                </Row>
+                <Row>
                     <div className="col-4 fw-bold">Last e-statement sent date:</div>
                     <div className="col-8">{infoMock.lastStatementSentDate}</div>
-                </div>
-                <div className="row">
+                </Row>
+                <Row>
                     <div className="col-4 fw-bold">E-statement sent status:</div>
                     <div className="col-8">{infoMock.statementSentStatus}</div>
-                </div>
+                </Row>
             </div>
             {/* card 5 */}
             <div className="rounded-3 bg-light p-4 text-start">
-                <div className="row">
+                <Row>
                     <div className="col-4 fw-bold">Last Increase limit Update:</div>
                     <div className="col-8">{infoMock.lastIncreaseLimit}</div>
-                </div>
-                <div className="row">
+                </Row>
+                <Row>
                     <div className="col-4 fw-bold">Last Reduce limit Update:</div>
                     <div className="col-8">{infoMock.lastReduceLimit}</div>
-                </div>
-                <div className="row">
+                </Row>
+                <Row>
                     <div className="col-4 fw-bold">Last Income Update:</div>
                     <div className="col-8">{infoMock.lastIncome}</div>
-                </div>
-                <div className="row">
+                </Row>
+                <Row>
                     <div className="col-4 fw-bold">Last Card Apply Date:</div>
                     <div className="col-8">{infoMock.lastCardApply}</div>
-                </div>
+                </Row>
             </div>
             {/* card 6 */}
             <div className="rounded-3 bg-light p-4 text-start">
-                <div className="row">
+                <Row>
                     <div className="col-4 fw-bold">Consent for collect & use:</div>
                     <div className="col-8">{infoMock.consentForCollect}</div>
-                </div>
-                <div className="row">
+                </Row>
+                <Row>
                     <div className="col-4 fw-bold">Consent for disclose:</div>
                     <div className="col-8">{infoMock.consentForDisclose}</div>
-                </div>
-                <div className="row">
+                </Row>
+                <Row>
                     <div className="col-4 fw-bold">Blocked Media:</div>
                     <div className="col-8">{infoMock.blockedMedia}</div>
-                </div>
+                </Row>
             </div>
             {/* card 7 */}
             <div className="rounded-3 bg-warning p-4">
                 <div className="fw-bold">Suggest Action</div>
                 <div>{infoMock.suggestAction}</div>
             </div>
+            {/* card 8 */}
+            <div className="rounded-3 bg-light p-4">
+                <div className="fw-bold">Payment Status: <span className="text-success">{infoMock.paymentStatus}</span></div>
+                <div className="d-flex justify-content-center gap-5">
+                    <div ><span className="fw-bold">Day Past Due: </span >{infoMock.dayPastDue} days</div>
+                    <div ><span className="fw-bold">Last Overdue Date: </span >{infoMock.lastOverDueDate || '-'}</div>
+                </div>
+            </div>
+            {/* card 9, 10 */}
+            <Row className=" gx-0">
+                 {/* card 9*/}
+                <div className="col-4 rounded-3 bg-light p-4 text-start">
+                    <div className="fw-bold">Suggested Cards</div>
+                    <div>
+                        {infoMock.suggestCards.map(card => (
+                            <div key={card.id}>{card.name}</div>
+                        ))}
+                    </div>
+                </div>
+                 {/* card 10 */}
+                <div className="col-8 rounded-3 bg-light p-4 text-start">
+                    <div className="fw-bold">Suggested Promotions</div>
+                </div>
+            </Row>
         </div>
 
     );
