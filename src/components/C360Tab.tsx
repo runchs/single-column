@@ -1,21 +1,21 @@
 import React from "react";
 
 interface Info {
-    // 1
+    // card 1
     nameTH: string;
     nameEN: string;
     cdpId: string;
     nationalID: string;
     status: string;
     complaintLevel: number;
-    // 2
+    // card 2
     customerGroup: string;
     customerGroupDesc: string;
     complaintGroup: string;
     customerType: string;
     memberStatus: string;
     customerSegment: string;
-    // 3
+    // card 3
     phoneNo: string;
     phoneNoDesc: string;
     callingPhone: string;
@@ -23,47 +23,47 @@ interface Info {
     gender: string;
     MaritalStatus: string;
     typeOfJob: string;
-    // 4
+    // card 4
     statementChannel: string;
-    lastStatementDate: string;
-    lastStatementStatus: string;
-    // 5
+    lastStatementSentDate: string;
+    statementSentStatus: string;
+    // card 5
     lastIncreaseLimit: string;
     lastReduceLimit: string;
     lastIncome: string;
     lastCardApply: string;
-    // 6
+    // card 6
     consentForCollect: string;
     consentForDisclose: string;
     blockedMedia: string;
-    // 7
+    // card 7
     suggestAction: string;
-    // 8
+    // card 8
     paymentStatus: string;
     dayPastDue: number;
     lastOverDueDate: string;
-    // 9
+    // card 9
     suggestCards: any[];
-    // 10
+    // card 10
     suggestPromotions: any[]
 }
 
 const infoMock: Info = {
-    // 1
+    // card 1
     nameTH: 'สมโชติ',
     nameEN: 'Somchot',
     cdpId: 'TESTCDP123456789',
     nationalID: '1234567890000',
     status: 'Sweetheart',
     complaintLevel: 2,
-    // 2
+    // card 2
     customerGroup: 'NORMAL',
     customerGroupDesc: 'VIP Customer',
     complaintGroup: '',
     customerType: 'VP',
     memberStatus: 'NORMAL',
     customerSegment: 'Existing Customer - Active',
-    // 3
+    // card 3
     phoneNo: '0812345678',
     phoneNoDesc: 'No update',
     callingPhone: 'value7',
@@ -71,43 +71,154 @@ const infoMock: Info = {
     gender: 'Male',
     MaritalStatus: 'Single',
     typeOfJob: 'BUSINESS OWNER',
-    // 4
+    // card 4
     statementChannel: 'E-statement',
-    lastStatementDate: '25 Mar 2025',
-    lastStatementStatus: 'ไม่สำเร็จ (Email ตีกลับ (ชั่วคราว) อาจเกิดจาก email box เต็ม Action: ดำเนินการส่งใหม่ได้)',
-    // 5
+    lastStatementSentDate: '25 Mar 2025',
+    statementSentStatus: 'ไม่สำเร็จ (Email ตีกลับ (ชั่วคราว) อาจเกิดจาก email box เต็ม Action: ดำเนินการส่งใหม่ได้)',
+    // card 5
     lastIncreaseLimit: '15 Feb 2025',
     lastReduceLimit: 'No Update',
     lastIncome: '15 Feb 2025',
     lastCardApply: '15 Feb 2025',
-    // 6
+    // card 6
     consentForCollect: 'Uncensent',
     consentForDisclose: 'Consent',
     blockedMedia: 'No blocked',
-    // 7
+    // card 7
     suggestAction: 'No Seggestion',
-    // 8
+    // card 8
     paymentStatus: '!Payment Overdue',
     dayPastDue: 89,
     lastOverDueDate: '25 Mar 2025',
-    // 9
+    // card 9
     suggestCards: [
         { id: 1, name: 'Club Thailand JCB Card 1' },
         { id: 2, name: 'Club Thailand JCB Card 2' },
         { id: 3, name: 'Club Thailand JCB Card 3' }
     ],
-    // 10
+    // card 10
     suggestPromotions: []
 }
 
 const C360Tabs: React.FC = () => {
     return (
-        <div className="p-4 bg-primary">
-            <div className="text-end mb-4 text-light">CDP data update as of <span className="fw-bold">25 Mar 2025</span></div>
-            <div className="rounded-3 bg-light">
-                <div></div>
-                <div></div>
-                <div></div>
+        <div className="p-4 bg-primary d-flex flex-column gap-3">
+            <div className="text-end text-light">CDP data update as of <span className="fw-bold">25 Mar 2025</span></div>
+            {/* card 1 */}
+            <div className="rounded-3 bg-light row gx-0 p-4">
+                <div className="col-9 text-start fw-bold">
+                    <div>{infoMock.nameTH} {infoMock.cdpId}</div>
+                    <div>{infoMock.nameEN} {infoMock.cdpId}</div>
+                    <div>National ID: {infoMock.nationalID}</div>
+                </div>
+                <div className="col-3 text-start fw-bold text-center">
+                    <div>{infoMock.status}</div>
+                    <div className="rounded-4 text-light bg-warning">Complaint Level: {infoMock.complaintLevel}</div>
+                </div>
+            </div>
+            {/* card 2 */}
+            <div className="rounded-3 bg-light p-4 text-start">
+                <div className="row">
+                    <div className="col-4 fw-bold">Customer Group:</div>
+                    <div className="col-8">{infoMock.customerGroup}</div>
+                </div>
+                <div className="row">
+                    <div className="col-4 fw-bold">Complaint Group:</div>
+                    <div className="col-8">{infoMock.complaintGroup}</div>
+                </div>
+                <div className="row">
+                    <div className="col-4 fw-bold">Customer Type:</div>
+                    <div className="col-8">{infoMock.customerType}</div>
+                </div>
+                <div className="row">
+                    <div className="col-4 fw-bold">Member Status:</div>
+                    <div className="col-8">{infoMock.memberStatus}</div>
+                </div>
+                <div className="row">
+                    <div className="col-4 fw-bold">Customer Segment:</div>
+                    <div className="col-8">{infoMock.customerSegment}</div>
+                </div>
+            </div>
+            {/* card 3 */}
+            <div className="rounded-3 bg-light p-4 text-start">
+                <div className="row">
+                    <div className="col-4 fw-bold">Phone No.:</div>
+                    <div className="col-8">{infoMock.phoneNo}</div>
+                </div>
+                <div className="row">
+                    <div className="col-4 fw-bold">Calling phone:</div>
+                    <div className="col-8">{infoMock.callingPhone}</div>
+                </div>
+                <div className="row">
+                    <div className="col-4 fw-bold">Mail-to-Office:</div>
+                    <div className="col-8">{infoMock.address}</div>
+                </div>
+                <div className="row">
+                    <div className="col-4 fw-bold">Gender:</div>
+                    <div className="col-8">{infoMock.gender}</div>
+                </div>
+                <div className="row">
+                    <div className="col-4 fw-bold">Marital Status:</div>
+                    <div className="col-8">{infoMock.MaritalStatus}</div>
+                </div>
+                <div className="row">
+                    <div className="col-4 fw-bold">Type of Job:</div>
+                    <div className="col-8">{infoMock.typeOfJob}</div>
+                </div>
+            </div>
+            {/* card 4 */}
+            <div className="rounded-3 bg-light p-4 text-start">
+                <div className="row">
+                    <div className="col-4 fw-bold">Statement Channel:</div>
+                    <div className="col-8">{infoMock.statementChannel}</div>
+                </div>
+                <div className="row">
+                    <div className="col-4 fw-bold">Last e-statement sent date:</div>
+                    <div className="col-8">{infoMock.lastStatementSentDate}</div>
+                </div>
+                <div className="row">
+                    <div className="col-4 fw-bold">E-statement sent status:</div>
+                    <div className="col-8">{infoMock.statementSentStatus}</div>
+                </div>
+            </div>
+            {/* card 5 */}
+            <div className="rounded-3 bg-light p-4 text-start">
+                <div className="row">
+                    <div className="col-4 fw-bold">Last Increase limit Update:</div>
+                    <div className="col-8">{infoMock.lastIncreaseLimit}</div>
+                </div>
+                <div className="row">
+                    <div className="col-4 fw-bold">Last Reduce limit Update:</div>
+                    <div className="col-8">{infoMock.lastReduceLimit}</div>
+                </div>
+                <div className="row">
+                    <div className="col-4 fw-bold">Last Income Update:</div>
+                    <div className="col-8">{infoMock.lastIncome}</div>
+                </div>
+                <div className="row">
+                    <div className="col-4 fw-bold">Last Card Apply Date:</div>
+                    <div className="col-8">{infoMock.lastCardApply}</div>
+                </div>
+            </div>
+            {/* card 6 */}
+            <div className="rounded-3 bg-light p-4 text-start">
+                <div className="row">
+                    <div className="col-4 fw-bold">Consent for collect & use:</div>
+                    <div className="col-8">{infoMock.consentForCollect}</div>
+                </div>
+                <div className="row">
+                    <div className="col-4 fw-bold">Consent for disclose:</div>
+                    <div className="col-8">{infoMock.consentForDisclose}</div>
+                </div>
+                <div className="row">
+                    <div className="col-4 fw-bold">Blocked Media:</div>
+                    <div className="col-8">{infoMock.blockedMedia}</div>
+                </div>
+            </div>
+            {/* card 7 */}
+            <div className="rounded-3 bg-warning p-4">
+                <div className="fw-bold">Suggest Action</div>
+                <div>{infoMock.suggestAction}</div>
             </div>
         </div>
 
