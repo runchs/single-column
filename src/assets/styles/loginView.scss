@@ -1,0 +1,19 @@
+.login-view-container {
+    .logo-wrp {
+        background-color: #7460cf;
+        img {
+            margin-top: -30px;
+            width: 90%;
+        }
+    }
+    .form-wrp {
+        max-width: 500px;
+        .label-wrp {
+            min-width: 100px;
+        }
+        .form-control:focus {
+            border-color: #7982e9;
+            box-shadow: none;
+        }
+    }
+}
