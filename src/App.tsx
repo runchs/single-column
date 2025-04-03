@@ -1,12 +1,22 @@
 import React from 'react';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import './App.scss';
 // components
-import Tabs from './components/Tabs';
+import LoginView from './views/LoginView';
+import SearchView from './views/SearchView';
+import InformationView from './views/InformationView';
 
 function App() {
   return (
     <div className="App">
-     <Tabs />
+     <Router>
+      <Routes>
+        <Route path="/" element={<LoginView />} />
+        <Route path="/search" element={<SearchView />} />
+        <Route path="/information" element={<InformationView />} />
+      </Routes>
+    </Router>
     </div>
   );
 }

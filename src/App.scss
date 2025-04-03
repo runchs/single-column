@@ -1,0 +1,21 @@
+@use "./assets/styles/customTabs.scss";
+@import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@400;700&display=swap');
+
+.App {
+	height: 100vh;
+  text-align: center;
+  font-family: 'Sarabun', sans-serif;
+}
+
+.bg-logo {
+	background-color: #7460cf;
+  }
+
+.bg-color-primary {
+  background-color: #7982e9;
+}
+
+.bg-suggest-action {
+  background-color: #faf86c;
+} 
+
