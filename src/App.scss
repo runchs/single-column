@@ -9,10 +9,40 @@
 	height: 100vh;
 }
 
+// color
 .bg-color-primary {
 	background-color: #7982e9;
 }
 
+.bg-color-secondary {
+	background-color: #a8b7f5;
+}
+
+.bg-color-tertiary {
+	background-color: #f8f8f8;
+}
+
 .bg-suggest-action {
 	background-color: #faf86c;
+}
+
+// input
+.form-control:focus {
+	border-color: #7982e9 !important;
+	box-shadow: none !important;
+}
+
+.form-check-input {
+	cursor: pointer !important;
+	&:focus {
+		box-shadow: none !important;
+	}
+}
+
+.form-check-label {
+	width: 100%;
+}
+
+.label-wrp {
+	min-width: 100px;
 }

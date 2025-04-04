@@ -15,6 +15,7 @@ function App() {
         <Route path="/" element={<LoginView />} />
         <Route path="/search" element={<SearchView />} />
         <Route path="/information" element={<InformationView />} />
+        <Route path="/c360" element={<InformationView defaultTab="c360" />} />
       </Routes>
     </Router>
     </div>

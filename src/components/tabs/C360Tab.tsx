@@ -1,7 +1,7 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
 
-interface Info {
+interface IInfo {
     updateDate: string;
     // card 1
     nameTH: string;
@@ -50,7 +50,7 @@ interface Info {
     suggestPromotions: any[]
 }
 
-const infoMock: Info = {
+const infoMock: IInfo = {
     updateDate: '25 Mar 2025',
     // card 1
     nameTH: 'รัญชิดา เสน่ห์ภักดี',
@@ -103,35 +103,35 @@ const infoMock: Info = {
     suggestPromotions: []
 }
 
-const suggestCards = () => {
-    return (
-        <div>
-            {infoMock.suggestCards.length > 0 ? (
-                infoMock.suggestCards.map(card => (
-                    <div key={card.id}>• {card.name}</div>
-                ))
-            ) : (
-                <div>• No Suggestions</div>
-            )}
-        </div>
-    );
-};
-
-const suggestPromotions = () => {
-    return (
-        <div>
-            {infoMock.suggestCards.length > 0 ? (
-                infoMock.suggestCards.map(card => (
-                    <div key={card.id}>• {card.name}</div>
-                ))
-            ) : (
-                <div>• No Suggestions</div>
-            )}
-        </div>
-    );
-};
-
 const C360Tabs: React.FC = () => {
+    const suggestCards = () => {
+        return (
+            <div>
+                {infoMock.suggestCards.length > 0 ? (
+                    infoMock.suggestCards.map(card => (
+                        <div key={card.id}>• {card.name}</div>
+                    ))
+                ) : (
+                    <div>• No Suggestions</div>
+                )}
+            </div>
+        );
+    };
+    
+    const suggestPromotions = () => {
+        return (
+            <div>
+                {infoMock.suggestCards.length > 0 ? (
+                    infoMock.suggestCards.map(card => (
+                        <div key={card.id}>• {card.name}</div>
+                    ))
+                ) : (
+                    <div>• No Suggestions</div>
+                )}
+            </div>
+        );
+    };
+
     return (
         <div className="py-4 px-5 d-flex flex-column gap-3 bg-color-primary">
             <div className="text-end text-light">CDP data update as of <span className="fw-bold">{infoMock.updateDate}</span></div>

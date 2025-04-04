@@ -5,11 +5,16 @@ import Tabs from 'react-bootstrap/Tabs';
 import C360Tab from "../components/tabs/C360Tab";
 import EmproTab from "../components/tabs/EmproTab";
 
-const InformationView: React.FC = () => {
+interface InformationViewProps {
+  defaultTab?: string;
+}
+
+
+const InformationView: React.FC<InformationViewProps> = ({ defaultTab = "empro" }) => {
   return (
     <div className="h-100">
       <Tabs
-        defaultActiveKey="c360"
+        defaultActiveKey={defaultTab}
         id="information-view"
         className="tabs-wrp"
       >
